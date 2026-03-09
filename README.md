@@ -1,216 +1,42 @@
-<h1 align="center">
-  <br>
-  
-<p align="center">
-  <a href="#overview">Over View</a> •
-  <a href="#features">Features</a> •
-  <a href="#gettingStarted">Getting Started</a> •
-  <a href="#installation">Installation</a> •
-  <a href="#configuration">Configuration</a> •
-  <a href="#deployment">Deployment</a> •
-  <a href="#techUsed">Tech Used</a> •
-  <a href="#author">Author</a> •
-  <a href="#contributing">Contributing</a> •
-  <a href="#license">License</a>
-</p>
+# Akshit Sharma - Portfolio
 
----
+Personal portfolio website showcasing my projects, skills, and experience as a computer science student.
 
+## About
 
-<h1 id="features">Features :</h1>
-<p>:large_blue_diamond: Summary and Avatar<br>
-:large_blue_diamond: Social Links<br>
-:large_blue_diamond: About Me<br>
-:large_blue_diamond: Skills Set<br>
-:large_blue_diamond: Open-source Projects (connected with github)<br>
-:large_blue_diamond: Major Projects<br>
-:large_blue_diamond: Experience Timeline<br>
-:large_blue_diamond: Contact Me</p>
-<p>:wrench: more to come</p>
+Computer science student at Kalvium's UG program in CS (Software Product Engineering) (2024-28) and B.E(CSE) at Chitkara University. Passionate about learning new technologies and building innovative solutions.
 
+## Projects
 
-<h1 id="gettingStarted">Getting Started :</h1>
-<p>An overview of TechFolio how to download and run it on your local machine and then configure it for deployment or development. :relaxed:</p>
-<p>You are gonna need <a href="">git</a> and <a href="">node-Js</a> installed on your local machine. </p>
+### AI Study Buddy
+AI study assistant enabling users to upload notes and query them using natural language.
+- Stack: MERN, Gemini API, JWT
+- [Live Demo](https://aistudybuddy.netlify.app/)
+- [GitHub](https://github.com/kalviumcommunity/S84_Akshit_Capstone_AiStudyBuddy)
 
-**Pre requires:**
-```ruby
-node@v10.16.0 or higher
-npm@6.9.0 or higher
-git@2.17.1 or higher
+### Hummanizer
+Application that refines AI-generated text to improve readability and human-like tone.
+- Stack: React 19, Vite, Gemini API, Axios
+- [Live Demo](https://luminous-tapioca-411853.netlify.app/)
+- [GitHub](https://github.com/akshit-sharma-15/Hummanizer)
+
+## Skills
+
+- Languages: C++, Java, Python
+- Frontend: React.js, Tailwind CSS, HTML5, CSS3, JavaScript
+- Backend: Node.js, Express.js
+- Databases: MongoDB, MySQL, PostgreSQL
+- Tools: Docker, Git, REST APIs
+
+## Links
+
+- [GitHub](https://github.com/akshit-sharma-15)
+- [LinkedIn](https://www.linkedin.com/in/akshit-sharma-15/)
+- [Resume](https://docs.google.com/document/d/10q8zuoqGIORs72gr2v0-_MF65tVp2QFs/edit?usp=sharing&ouid=113901776171351104214&rtpof=true&sd=true)
+
+## Setup
+
+```bash
+npm install
+npm start
 ```
-
-<h1 id="installation">Installation :</h1>
-<p> All you need to do is to run 4 simple commands in the command line or terminal in the directory where you want to set up it :heart_eyes: </p>
-
-```ruby
-# Clone this repository
-$ git clone https://github.com/AQadir64/TechFolio.git
-
-# Go into the repository
-$ cd techfolio
-
-# Install project dependencies
-$ npm install
-
-#Start's development server
-$ npm start
-```
-
-**Bingo :tada:**
-
-<h1 id="configuration">Configuration :</h1>
-<p>
-  <a href="#githubSetup">Github Setup</a> • <br>
-  <a href="#configFile">Config File</a> •
-</p>
-<h3 id="githubSetup">Setting Up Github For Your Open Source Projects:</h3>
-<p>Generate a Github personal access token using these <a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token">Instructions</a> Make sure you don't select any scope just generate a simple token :relaxed: </p>
-<p>1. Now you need to convert that github access token to base-64 string for security don't worry its just like eating a piece of cake :birthday:. go to <a href="https://www.base64encode.org/">Base64 Decode and Encode</a> copy your access code in the box and select the destination character set to ascii and hit the encode green button Bingo :tada: (see the example below)</p> 
-<p align="center"><img src="https://user-images.githubusercontent.com/38910854/87902564-62736180-ca73-11ea-9b13-949228bb6409.png" width="600"/> </p>
-<p>2. Now create a .env file in the root directory of the project. env file lets you customize your working environment variables. </p>
-
-```ruby
-
-- TechFolio
-  - node_modules
-  - public
-  - src
-  - .env         <-- create it here
-  - .gitignore
-  - package-lock.json
-  - package.json
-  
-```
-<p>2.1 In .env file, add key REACT_APP_GITHUB_TOKEN and set in to your github token like this.</p>
-
-```ruby
- // .env
-
-  REACT_APP_GITHUB_ACCESS_TOKEN = "YOUR GITHUB TOKEN HERE" //make sure you have set you base64 converted token.
-  
-```
-<p>You are just one step away from making your techfolio :smiley:</p>
-
-<p> Shift to <b> > /src/techfolio.js </b> and modify the config as per your need. Make sure you read the notes before each section they will assist you out in make configuration simple for you. :smiley:</p>
-
-```java
-
-/* 1. Main App */
-/* 2. Social Networks */
-/* 3. Banner Section  */
-/* 4. About Section  */
-/* 5. Skills Section */
-/* 6. Open Source Section  */
-/* 7. Projects Section */
-/* 8. Experience Section */
-/* 9. Contact Section */
-
-/*=====================
-    1. Main App
-    Desc: set what's in the document's head section
-==========================*/
-
-const app = {
-  title: "AbdulQadir Portfolio",
-  // Note : consider leaving null if you dont have any head icon
-  icon: "ayin_qoph.png",
-  description: "An ordinary karachitte Web Developer, Mobile Shutterbug, and Writer.",
-};
-
-/*=====================
-    2. Social Networks 
-    Desc: your social network links
-==========================*/
-
-const socialNetworks = {
-  //Note : if you dont need or have any social network just add null value
-  github: "https://github.com/AQadir64",
-  linkden: null,
-  facebook: "https://www.facebook.com/profile.php?id=100006896625330",
-  instagram: "https://www.instagram.com/_ayin_qoph/",
-  twitter: null,
-};
-
-const bannerSection = { ..... }
-
-const aboutSection = { ...... }
-
-const skillsSection = { ..... }
-
-const openSourceSection = { .... }
-
-const projectsSection = { ...... }
-
-const experienceSection = { .... }
-
-const contactSection = {......}
-
-```
-<h1 id="deployment">Deployment :</h1>
-<p> Now All you need to do is to deploy your TechFolio and here are some options to deploy it :smirk: :smirk: </p>
-
-<p> <b>The step below is important! <br> If you skip it, your app will not deploy correctly. :smirk: </b></p>
-<p>Open your package.json and add a homepage field for your project: </p>
-
-```ruby
-
-"homepage": "https://myusername.github.io", // edit my "https://aqadir64.github.io" with your username
-
-````
-
-<p>
-  <a href="surge">Surge </a>  • <br>
-  <a href="#githubPages">Github Pages</a> • <br>
-  <a href="#netlify">Netlify</a> •
-</p>
-
-<h3 id="surge">Deployment to Surge </h3>
-<p> This is one of the easiest ways to deploy your techfolio and i recommend you to read the official documentation of deploying react app on <a href="https://create-react-app.dev/docs/deployment/#surge">surge</a> :smirk: but Don't worry i'll guide you step by step how you gonna do it </p>
-
-<p><b>1</b> : Build your techflio by running <b>npm run build</b> in your project directory </p>
-<p><b>2</b> : Install the Surge CLI if you haven’t already by running <b>npm install -g surge. </b> </p>
-<p><b>3</b> : Run the <b>surge</b> command and log in you or create a new account.</p>
-<p><b>4</b> : When asked about the project path, make sure to specify the build folder, for example: </p>
-
-```ruby
-project path: /path/to/project/build
-```
-<p><b>5</b> : Last it will ask you about domain name enter it e.g <b>yourname.surge.sh </b> :tada:</p>
-
-<p align="center"><b>Bingo :tada:</b></p>
-
-<h3 id="githubpages">Deployment to Github Pages </h3>
-
-<p>adding sooon ! :sleeping:</p>
-
-<h3 id="netlify">Deployment to Netlify </h3>
-
-<p>adding sooon ! :sleeping:</p>
-
-<h1 id="techUsed">Technologies Used :</h1>
-<h3><a href="https://reactjs.org/docs/getting-started.html">:vhs: React </a><br>
-<a href="https://graphql.org/">:vhs: GraphQl </a><br>
-<a href="https://www.apollographql.com/docs/react/get-started/">:vhs: Apollo boost </a><br>
-<a href="https://www.npmjs.com/package/react-helmet">:vhs: React Helet </a><br>
-<a href="https://www.react-reveal.com/">:vhs: React Reveal </a><br>
-<a href="https://www.npmjs.com/package/react-scroll">:vhs: React Scroll </a><br>
-<a href="https://www.npmjs.com/package/react-typist">:vhs: React Typist </a><br>
-<a href="https://www.npmjs.com/package/react-visibility-sensor">:vhs: React Visibility Sensor </a><br>
-<a href="https://roylee0704.github.io/react-flexbox-grid/">:vhs: React Flex-Box Grid </a><br>
-<a href="https://www.npmjs.com/package/react-device-detect">:vhs: React Device Detect </a><br>
-<a href="https://www.npmjs.com/package/react-easy-emoji">:vhs: React Easy Emoji </a><br>
-</h3>
-
-
-<h1 id="contributing">Contributing:</h1>
-
-<p>Feel free to open an issue on any kind of bug or glitches you find in the project and to make it better don't hesitate to contribute. :smiley:</p>
-<p>Yes you can contribute to project by adding more features, I'm waiting for your pull request. :smiley:</p>
-
-<h1 id="license">License:</h1>
-
-<p>adding sooon ! :sleeping:</p>
-
-
-
