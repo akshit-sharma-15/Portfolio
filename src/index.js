@@ -1,0 +1,7 @@
+
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import ApolloProvider from "./ApolloProvider";
+
+const root = createRoot(document.getElementById("root"));
+root.render(ApolloProvider);
