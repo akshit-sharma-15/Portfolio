@@ -202,12 +202,6 @@ project path: /path/to/project/build
 <a href="https://www.npmjs.com/package/react-easy-emoji">:vhs: React Easy Emoji </a><br>
 </h3>
 
-<h1 id="author">Author:</h1>
-
-| <img src="https://user-images.githubusercontent.com/38910854/88262175-1fb6c100-cce1-11ea-92ee-5904aee9657f.jpeg" width="150"/>
-| :---: | 
-| Abdul Qadir :sleeping: | 
-| <a href="http://abdulqadir.surge.sh/"> TechFolio </a> | 
 
 <h1 id="contributing">Contributing:</h1>
 
@@ -217,5 +211,6 @@ project path: /path/to/project/build
 <h1 id="license">License:</h1>
 
 <p>adding sooon ! :sleeping:</p>
+
 
 
