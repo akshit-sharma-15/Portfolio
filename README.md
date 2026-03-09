@@ -1,13 +1,6 @@
 <h1 align="center">
   <br>
-  <a href=""><img src="https://user-images.githubusercontent.com/38910854/87874801-3d84dd00-c9e6-11ea-8b47-0f0106227fb4.png" alt="ArminC AutoExec"></a>
-</h1>
-<h3 align="center">An Open Sourced Creative Portfolio for Developer and Tech Geeks :smiley:</h3>
-<p align="center">
-  <img src="https://forthebadge.com/images/badges/made-with-javascript.svg">
-  <img src="https://forthebadge.com/images/badges/built-with-love.svg">
-  <img src="https://forthebadge.com/images/badges/makes-people-smile.svg">
-</p>
+  
 <p align="center">
   <a href="#overview">Over View</a> •
   <a href="#features">Features</a> •
@@ -23,12 +16,6 @@
 
 ---
 
-<h1 id="overview">Over View :</h1>
-<img src="https://user-images.githubusercontent.com/38910854/88264039-84274f80-cce4-11ea-94a5-4e59c8b24996.gif"/>  
-<p>TechFolio is an open-source portfolio for the developer and other geeks to make their artistic and infinite scroll portfolio in just 5 mins and some basic steps from configuration to deployment. :smiley:</p>
-<p>Feel free to open an issue on any kind of bug or glitches you find in the project and to make it better don't hesitate to contribute. :relaxed:</p>
-<p>Yes you can contribute to project by adding more features, I'm waiting for your pull request.:relaxed: </p>
-<h2 align="center"> <a href="http://abdulqadir.surge.sh/"> Preview :skull: </a></h2>
 
 <h1 id="features">Features :</h1>
 <p>:large_blue_diamond: Summary and Avatar<br>
@@ -103,9 +90,6 @@ $ npm start
   REACT_APP_GITHUB_ACCESS_TOKEN = "YOUR GITHUB TOKEN HERE" //make sure you have set you base64 converted token.
   
 ```
-<p>Note: Open Source Projects section only show pinned items of your Github. If you haven't pinned your github repos, please follow this <a href="https://docs.github.com/en/enterprise/2.13/user/articles/pinning-items-to-your-profile">Instructions.</a></p>
-
-<h3 id="configFile">Changing Config file:</h3>
 <p>You are just one step away from making your techfolio :smiley:</p>
 
 <p> Shift to <b> > /src/techfolio.js </b> and modify the config as per your need. Make sure you read the notes before each section they will assist you out in make configuration simple for you. :smiley:</p>
@@ -233,4 +217,5 @@ project path: /path/to/project/build
 <h1 id="license">License:</h1>
 
 <p>adding sooon ! :sleeping:</p>
+
 
