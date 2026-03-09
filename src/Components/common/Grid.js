@@ -1,4 +1,3 @@
-import React from "react";
 import "./Grid.css";
 
 function addAlignClass(classes, prop, value) {

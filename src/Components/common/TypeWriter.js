@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 /**
  * TypeWriter - types out an array of lines one character at a time.
@@ -52,9 +52,9 @@ function TypeWriter({ lines = [], typingSpeed = 30, delayBetweenLines = 800, sho
       {displayed.map((item, i) => (
         <p className={item.className || "line"} key={i} style={item.style}>
           {item.text}
+          {showCursor && !done && i === currentLine && <span className="typewriter-cursor">|</span>}
         </p>
       ))}
-      {showCursor && !done && <span className="typewriter-cursor">|</span>}
       {showCursor && done && <span className="typewriter-cursor blink">|</span>}
     </div>
   );

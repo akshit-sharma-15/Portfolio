@@ -1,4 +1,4 @@
-import React, { useContext, Fragment } from "react";
+import { useContext } from "react";
 import { InView } from "react-intersection-observer";
 import TypeWriter from "../common/TypeWriter";
 import { Fade } from "react-awesome-reveal";
@@ -7,23 +7,14 @@ import { ScrollContext } from "../../Context/scroll";
 import { aboutSection } from "../../portfolio";
 import { isMobile } from "react-device-detect";
 import Heading from "../common/Heading";
+
 function About() {
   const { scrollChange } = useContext(ScrollContext);
   return (
-    <Fragment>
-      {isMobile && <Heading heading={"About"} />}
-      <section
-        className="about_section section section2"
-        id="aboutSection"
-        name="about"
-      >
-        <InView
-          onChange={(inView) => {
-            if (inView) {
-              scrollChange("about");
-            }
-          }}
-        >
+    <>
+      {isMobile && <Heading heading="About" />}
+      <section className="about_section section section2" id="aboutSection" name="about">
+        <InView onChange={(inView) => inView && scrollChange("about")}>
           <Fade direction="up" cascade>
             <div className="container">
               <div className="device">
@@ -40,7 +31,7 @@ function About() {
                           ]}
                           typingSpeed={20}
                           delayBetweenLines={1000}
-                          showCursor={true}
+                          showCursor
                         />
                       </h2>
                     </div>
@@ -51,7 +42,7 @@ function About() {
           </Fade>
         </InView>
       </section>
-    </Fragment>
+    </>
   );
 }
 

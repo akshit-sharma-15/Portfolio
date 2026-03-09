@@ -1,4 +1,4 @@
-import React, { useContext, Fragment } from "react";
+import { useContext } from "react";
 import { Col, Row } from "../common/Grid";
 import { Fade, Flip } from "react-awesome-reveal";
 import "./contact.css";
@@ -8,125 +8,58 @@ import { contactSection, socialNetworks } from "../../portfolio";
 import { ScrollContext } from "../../Context/scroll";
 import { isMobile } from "react-device-detect";
 import Heading from "../common/Heading";
+import { SocialLink } from "../common/SocialLink";
+import githubLogo from "../../assets/logos/icons8-github-24.png";
+import linkedinLogo from "../../assets/logos/icons8-linkedin-24.png";
+import leetcodeLogo from "../../assets/logos/icons8-leetcode-24.png";
+
+const socialLinks = [
+  { key: "linkden", logo: linkedinLogo, alt: "LinkedIn" },
+  { key: "github", logo: githubLogo, alt: "GitHub" },
+  { key: "leetcode", logo: leetcodeLogo, alt: "LeetCode" },
+];
+
 function Contact() {
   const { scrollChange } = useContext(ScrollContext);
-  const { github, linkden, instagram, facebook, twitter } = socialNetworks;
-  const contactList = contactSection.contactList.map((contact, i) => {
-    return (
-      <Col xs={12} key={i}>
-        <h2 className="contact_section_contact">
-          <img
-            draggable="false"
-            className="emoji"
-            alt="💠"
-            src="https://twemoji.maxcdn.com/v/13.0.0/72x72/1f4d2.png"
-          />
-          {contact}
-        </h2>
-      </Col>
-    );
-  });
+
   return (
-    <Fragment>
-      {isMobile && (
-        <Heading heading={"Contact"} style={{ marginBottom: "60px" }} />
-      )}
+    <>
+      {isMobile && <Heading heading="Contact" />}
       <section className="section section7" id="contactSection" name="contact">
         <div className="site-container">
-          <InView
-            onChange={(inView) => {
-              if (inView) {
-                scrollChange("contact");
-              }
-            }}
-          >
+          <InView onChange={(inView) => inView && scrollChange("contact")}>
             <Row around="xs" middle="xs" center="xs">
               <Col lg={6} xs={12}>
                 <Flip direction="horizontal">
-                  {" "}
-                  <img
-                    src={contactIllustration}
-                    alt="skills"
-                    className="portfolio_skill_section_img"
-                    style={{
-                      maxWidth: "100%",
-                    }}
-                  />{" "}
+                  <img src={contactIllustration} alt="Contact" style={{ maxWidth: "100%" }} />
                 </Flip>
               </Col>
               <Col lg={6} xs={12}>
                 <Fade direction="up" cascade>
                   <Row around="xs">
                     <Col xs={12}>
-                      <h2 className="contact_section_tagline">
-                        {contactSection.contactTagline}
-                      </h2>
+                      <h2 className="contact_section_tagline">{contactSection.contactTagline}</h2>
                     </Col>
                     <Col xs={12}>
                       <ul className="social-networks spin-icon">
-                        {linkden && (
-                          <li>
-                            <a
-                              href={linkden}
-                              className="icon-linkedin social-network-link"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              LinkedIn
-                            </a>
-                          </li>
-                        )}
-                        {twitter && (
-                          <li>
-                            <a
-                              href={twitter}
-                              className="icon-twitter social-network-link"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              Twitter
-                            </a>
-                          </li>
-                        )}
-                        {facebook && (
-                          <li>
-                            <a
-                              href={facebook}
-                              className="icon-facebook social-network-link"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              Facebook
-                            </a>
-                          </li>
-                        )}
-                        {github && (
-                          <li>
-                            <a
-                              href={github}
-                              className="icon-github social-network-link"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              GitHub
-                            </a>
-                          </li>
-                        )}
-                        {instagram && (
-                          <li>
-                            <a
-                              href={instagram}
-                              className="icon-instagram social-network-link"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              Instagram
-                            </a>
-                          </li>
+                        {socialLinks.map(({ key, logo, alt }) => 
+                          socialNetworks[key] && <SocialLink key={key} href={socialNetworks[key]} logo={logo} alt={alt} />
                         )}
                       </ul>
                     </Col>
-                    {contactList}
+                    {contactSection.contactList.map((contact, i) => (
+                      <Col xs={12} key={i}>
+                        <h2 className="contact_section_contact">
+                          <img
+                            draggable="false"
+                            className="emoji"
+                            alt="💠"
+                            src="https://twemoji.maxcdn.com/v/13.0.0/72x72/1f4d2.png"
+                          />
+                          {contact}
+                        </h2>
+                      </Col>
+                    ))}
                   </Row>
                 </Fade>
               </Col>
@@ -134,7 +67,7 @@ function Contact() {
           </InView>
         </div>
       </section>
-    </Fragment>
+    </>
   );
 }
 

@@ -137,47 +137,58 @@
   transition: transform 0.4s ease-out;
   transform: rotateZ(360deg);
 }
-.social-networks .icon-linkedin:after {
-  content: "";
-}
-.social-networks .icon-linkedin:hover:before,
-.social-networks .icon-linkedin:focus:before {
-  box-shadow: 0 2px 15px #7f5af0 !important;
-}
-.social-networks .icon-facebook:after {
-  content: "";
-}
-.social-networks .icon-facebook:hover:before,
-.social-networks .icon-facebook:focus:before {
-  box-shadow: 0 2px 15px #7f5af0 !important;
-}
-.social-networks .icon-twitter:after {
-  content: "";
-}
-.social-networks .icon-twitter:hover:before,
-.social-networks .icon-twitter:focus:before {
-  box-shadow: 0 2px 15px #7f5af0 !important;
-}
-.social-networks .icon-github:after {
-  content: "";
-}
-.social-networks .icon-github:hover:before,
-.social-networks .icon-github:focus:before {
-  box-shadow: 0 2px 15px #7f5af0 !important;
-}
-.social-networks .icon-instagram:after {
-  content: "";
-}
-.social-networks .icon-instagram:hover:before,
-.social-networks .icon-instagram:focus:before {
-  box-shadow: 0 2px 15px #7f5af0 !important;
-}
+
+/* Icon font definitions - No longer needed, using image-based icons */
 .social-networks .icon-menu:after {
-  content: "";
+  content: "";
 }
 .social-networks .icon-menu:hover:before,
 .social-networks .icon-menu:focus:before {
   box-shadow: 0 2px 15px #7f5af0 !important;
+}
+
+/* Image-based social network links (GitHub, LinkedIn, LeetCode) */
+.social-networks .social-network-link-img {
+  display: block;
+  position: relative;
+  margin: 0 7px;
+  width: 68px;
+  height: 68px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-networks .social-network-link-img:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  margin-top: -50%;
+  margin-left: -50%;
+  border-radius: 100px;
+  background-color: #1f2027;
+  transition: all 400ms;
+  z-index: 0;
+}
+.social-networks .social-network-link-img img {
+  position: relative;
+  z-index: 1;
+  width: 26px;
+  height: 26px;
+  filter: brightness(0) invert(1);
+}
+.social-networks .social-network-link-img:hover:before,
+.social-networks .social-network-link-img:focus:before {
+  box-shadow: 0 2px 15px #7f5af0 !important;
+}
+.social-networks.spin-icon .social-network-link-img:hover img,
+.social-networks.spin-icon .social-network-link-img:focus img {
+  transition: transform 0.4s ease-out;
+  transform: rotateZ(360deg);
 }
 
 @media all and (max-width: 450px) {
@@ -199,6 +210,15 @@
   .social-networks .social-network-link:after {
     font-size: 26px;
     line-height: 50px;
+  }
+  .social-networks .social-network-link-img {
+    margin: 0 7px;
+    width: 50px;
+    height: 50px;
+  }
+  .social-networks .social-network-link-img img {
+    width: 20px;
+    height: 20px;
   }
 }
 

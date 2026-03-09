@@ -1,5 +1,3 @@
-import emoji from "react-easy-emoji";
-
 /* 1. Main App */
 /* 2. Social Networks */
 /* 3. Banner Section  */
@@ -9,8 +7,6 @@ import emoji from "react-easy-emoji";
 /* 7. Projects Section */
 /* 8. Experience Section */
 /* 9. Contact Section */
-
-/* wrap your text in emoji("") if you want to show emoji in your text
 
 /*=====================
     1. Main App
@@ -33,6 +29,7 @@ const socialNetworks = {
   //Note : if you dont need or have any social network just add null value
   github: "https://github.com/akshit-sharma-15",
   linkden: "https://www.linkedin.com/in/akshit-sharma-15/",
+  leetcode: "https://leetcode.com/u/akshit_sharma_15/",
 };
 
 /*=====================
@@ -43,9 +40,7 @@ const socialNetworks = {
 const bannerSection = {
   username: "Akshit Sharma",
   bannerHeading: "Developer",
-  bannerTagLine: emoji(
-    "Computer science student passionate about learning new technologies. 💻"
-  ),
+  bannerTagLine: "Computer science student passionate about learning new technologies. 💻",
   bannerAvatar: "avatar.jpeg",
   resumeLink: "https://docs.google.com/document/d/10q8zuoqGIORs72gr2v0-_MF65tVp2QFs/edit?usp=sharing&ouid=113901776171351104214&rtpof=true&sd=true",
 };

@@ -1,32 +1,25 @@
-import React, { Fragment } from "react";
 import { Col } from "../../common/Grid";
 import { Flip } from "react-awesome-reveal";
+import avatarImg from "../../../assets/imgs/avatar.jpeg";
+import defaultAvatarImg from "../../../assets/imgs/defaultAvatar.svg";
+
 function BannerImage({ bannerSection }) {
+  const isDefaultAvatar = bannerSection.bannerAvatar === "defaultAvatar.svg";
+  const avatarSrc = isDefaultAvatar ? defaultAvatarImg : avatarImg;
+  
   return (
-    <Fragment>
-      {" "}
+    <>
       <Col lg={4} xs={12}>
         <Flip direction="horizontal">
           <div className="hero-image shape">
-            {" "}
-            <div
-              className={
-                bannerSection.bannerAvatar === "defaultAvatar.svg"
-                  ? "wrap-default"
-                  : "wrap-image"
-              }
-            >
-              <img
-                src={require(`../../../assets/imgs/${bannerSection.bannerAvatar}`)}
-                alt=""
-                className="hero-image_img"
-              />
+            <div className={isDefaultAvatar ? "wrap-default" : "wrap-image"}>
+              <img src={avatarSrc} alt="Avatar" className="hero-image_img" />
             </div>
           </div>
         </Flip>
       </Col>
       <Col xs={1} />
-    </Fragment>
+    </>
   );
 }
 

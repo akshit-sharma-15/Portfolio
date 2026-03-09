@@ -1,8 +1,9 @@
-import React from "react";
 import Navbar from "./Navbar/Navbar";
 import Logo from "../common/Logo";
 import { socialNetworks, app } from "../../portfolio";
 import AppHelmet from "../common/AppHelmet";
+import githubLogo from "../../assets/logos/icons8-github-24.png";
+
 function Header() {
   return (
     <header className="site-header">
@@ -14,9 +15,11 @@ function Header() {
             <li>
               <a
                 href={socialNetworks.github}
-                className="icon-github social-network-link"
+                className="social-network-link-img"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                github
+                <img src={githubLogo} alt="GitHub" />
               </a>
             </li>
             <Navbar />
@@ -26,4 +29,5 @@ function Header() {
     </header>
   );
 }
+
 export default Header;

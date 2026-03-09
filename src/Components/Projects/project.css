@@ -87,6 +87,22 @@
   margin-top: 15px;
 }
 
+.project-links {
+  margin-top: 15px;
+}
+
+.project-link {
+  color: #7f5af0;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-right: 15px;
+}
+
+.project-link i {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
 .languages-profile {
   margin-top: 15px;
 }
